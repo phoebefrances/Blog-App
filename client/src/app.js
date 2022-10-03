@@ -4,4 +4,3 @@ export default () => {
     return <div>Blog App</div>
 }; 
 
-// *** test *** 
