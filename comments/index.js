@@ -18,6 +18,8 @@ app.post('/posts/:id/comments', (req, res) => {
     const comments = commentsByPostId[req.params.id] || [];
 }); 
 
+    comments.push({id: commentId, content })
+
 app.listen(4001, () => {
     console.log('Listening on port 4001')
 })
