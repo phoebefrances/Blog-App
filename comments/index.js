@@ -16,9 +16,13 @@ app.post('/posts/:id/comments', (req, res) => {
     const {content} = req.body; 
 
     const comments = commentsByPostId[req.params.id] || [];
-}); 
 
     comments.push({id: commentId, content })
+
+    commentsByPostId[req.params.id] = comments;
+}); 
+
+    
 
 app.listen(4001, () => {
     console.log('Listening on port 4001')
