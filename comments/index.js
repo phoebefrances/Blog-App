@@ -12,3 +12,7 @@ app.get('/posts/:id/comments', (req, res) => {
 app.post('/posts/:id/comments', (req, res) => {
 
 }); 
+
+app.listen(4001, () => {
+    console.log('Listening on port 4001')
+})
