@@ -3,11 +3,20 @@ import axios from 'axios';
 
 export default () => { 
 
-    const [title, setTitle] = useState (''); 
+    const [title, setTitle] = useState ('');
+    
+    const onSubmit = async (event) => {
+        event.preventDefault();
+
+        await axios.post('https://localhost:4000/posts' , {
+            title 
+        });
+        setTitle('');
+    };
 
     return (
     <div>
-    <form>
+    <form onSubmit={onSubmit}>
         <div className='form-group'>
             <label>Title</label>
             <input 
